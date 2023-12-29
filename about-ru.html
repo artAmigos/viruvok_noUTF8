@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viru Võrk OÜ - Видео наблюдение</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+    .offer-section {
+      background: linear-gradient(130deg, #0066ff, #00ffcc);
+    }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3); /* Increase the opacity for a darker shadow */
+  transition: 0.3s;
+  padding: 2rem; /* Increased padding for larger size */
+  margin: 1rem; /* Add more margin to separate the cards */
+}
+
+
+
+.offer-section, .advantages-section, .testimonials-section {
+  padding: 3rem 0; /* Increase the vertical padding for more block prominence */
+}
+
+    .advantages-section {
+      background-image: url('path-to-advantages-background.jpg');
+      background-size: cover;
+color: #000000;
+    }
+
+.advantages-section .card-body {
+ color: #000000; /* Изменено на черный для лучшей видимости */
+}
+
+    .testimonials-section {
+      background-image: url('path-to-testimonials-background.jpg');
+      background-size: cover;a
+      color: #333333;
+    }
+  
+ 
+    .btn-primary {
+      background-color: #0056b3;
+      border: none;
+      border-radius: 25px;
+      padding: 15px 32px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;  
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow to buttons */
+    }
+
+    .btn-primary:hover {
+      background-color: #004080;
+    }
+
+
+.advantages-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центрируем блоки горизонтально */
+}
+
+.advantages-section .col-md-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages-section .card {
+  height: 100%; /* Растягиваем карты на всю высоту колонки */
+}
+ .contact-form {
+            margin-top: 50px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #004080;
+        }
+  </style>
+</head>
+
+<header class="header-section bg-dark text-white py-3">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>
+      <!-- Логотип или название сайта -->
+      <img src="images/VIRUVÕRK.png" alt="Логотип" width=58% style="margin-top: -10px;">
+    </div>
+    <div>
+      <!-- Кнопки -->
+      <a href="index-ru.html" class="btn btn-light mr-2">Главная</a>
+      <a href="about-ru.html" class="btn btn-light mr-2">Задать вопрос</a>
+      <a href="contacts-ru.html" class="btn btn-light mr-2">Контакты</a>
+      <a href="about.html" class="btn btn-light mr-2">EE</a>
+      <a href="about-ru.html" class="btn btn-light">RU</a>
+    </div>
+  </div>
+</header>
+
+
+<body>
+
+  <!-- Оффер -->
+  <section class="offer-section py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h1 class="mb-3">Задать вопрос</h1>
+      <p class="mb-4">Наша фирма, предоставляет услуги – по обслуживанию, реновации и возведению новых сетей, а также видео охрана и продажа комплектующих.</p>
+      <a href="#services" class="btn btn-light btn-lg">Узнать больше</a>
+    </div>
+  </section>
+
+ <!-- Форма для ответа пользователя -->
+    <section class="contact-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2 class="text-center mb-4">Форма для ответа</h2>
+                    <form action="send_form.php" method="post" id="myForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Имя" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Тема сообщения" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Сообщение" name="message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Отправить" class="btn btn-primary btn-block">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно "Отправлено" -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <p>Отправлено!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+
+<!-- Футер -->
+<footer class="footer-section bg-dark text-white py-4">
+  <div class="container text-center">
+    <div class="footer-content">
+      <p class="contact-info">Свяжитесь с нами по телефону +372 55 67 66 87, +372 58 16 46 61 или по email: info@viruvork.ee</p>
+      <!-- Изображение логотипа Facebook с ссылкой -->
+      <a class="social-link" href="https://www.facebook.com/www.viruvork.ee" target="_blank">
+        <img class="logo" src="images/logo.png" alt="Facebook" width="40" height="40>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script>
+        function showModal() {
+            $('#myModal').modal('show'); // Показать модальное окно
+            setTimeout(function() {
+                $('#myModal').modal('hide'); // Скрыть модальное окно через 2 секунды
+            }, 2000);
+            document.getElementById("myForm").reset(); // Очистить форму после показа модального окна
+        }
+      </script>
+</body>
+</html>
+
